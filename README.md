@@ -8,7 +8,8 @@
 | New branch (empty) | `git switch --orphan branch-name` |
 | Delete branch | `git branch -d branch-name` | `-D` to force deletion
 | Link to remote git | `git remote add origin URL` |
-| Set remote as upstream | `git --set-upstream origin main` |
+| Push to remote (first time) | `git push --set-upstream origin branch-name` |
+| Push to Wiki| `git push  --force --set-upstream origin HEAD:master` | (older) Wiki still uses master instead of main
 | Linking a git submodule | `git submodule add URL folder-name-optional` | this will clone the submodule, great if there's no local copy |
 | Linking submodule without clone | `git update-index --add --cacheinfo 160000 <subrepo commit hash> <submod path>`<br>`git submodule init` | Edit/Create `.gitmodules` at root and add in <br>`[submodule "<submod path>"]`<br>`	path = <submod path>`<br>`	url = https://.....git`<br>and create the respective folder (can be empty)|
 | Stage (selective) | `git add file-name folder/*` | enclose in single quote (') if there's space in name/folder |
