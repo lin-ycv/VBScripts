@@ -1,6 +1,7 @@
 # Command Prompt commands
 | Function | Command | Notes |
 |:---:|---|---|
+| Delete desktop.ini recursively | `del /s /q /f /a ".\desktop.ini" ` | deletes from current and subdirectories |
 | Download GroupPolicyEditor for Homer users | `FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")`<br><br> `FOR %F IN ("%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~*.mum") DO (DISM /Online /NoRestart /Add-Package:"%F")` |
 | Folder Junction | `mklink /J link target` |
 | Foreach line in file do | `for /F "usebackq delims=" %i in ("file.txt") do echo %i` |
